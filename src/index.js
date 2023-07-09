@@ -1,9 +1,13 @@
 import { todo } from "./todos";
 import { todoList } from "./todoList";
 import { project } from "./projects";
-
+import { task } from "./tasks";
 //main list to add events
 const list = new todoList(new Array());
+
+const container = document.querySelector('.container');
+
+const inboxbtn = document.getElementById('inbox').addEventListener('click', ()=>{task(container, 'Inbox');});
 
 /**checks the dates of each list item and
  * adds it to this list
