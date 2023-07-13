@@ -1,18 +1,33 @@
+import { task } from "./tasks";
 
-class project{
-    constructor(todoList){
-        this.todoList = todoList;
-    }
+let projectList = [];
+const container = document.querySelector('.container');
 
-    get getTodoList(){
-        return this.todoList
-    }
+const addProject = (formParent, projectParent) => {
+    formParent.innerHTML = "";
 
-    set setTodoDoList(newToDoList){
-        this.todoList = newToDoList;
-    }
+    const form = document.createElement('form');
+    formParent.appendChild(form);
+
+    const input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    form.appendChild(input);
+
+    const addProject = document.createElement('button');
+    addProject.innerHTML = "Add";
+    form.appendChild(addProject);
+
+    addProject.addEventListener('click', (event)=>{
+        const newProjbtn = document.createElement('button');
+        newProjbtn.innerHTML = input.value;
+        newProjbtn.addEventListener('click', ()=>{task(container, input.value);});
+        projectParent.appendChild(newProjbtn);
+        projectList.push(newProjbtn);
+        formParent.innerHTML = "";
+        event.preventDefault();
+    });
 }
 
 export{
-    project
+    addProject, projectList
 };

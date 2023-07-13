@@ -24,9 +24,17 @@ const task = (parent,name) => {
     const viewListfunc = (list) => {
         viewListDiv.innerHTML = "";
         for(let i = 0; i < list.length; i++){
-            let a = document.createElement('div');
-            a.innerHTML = list[i].getDescription + "   " + list[i].getDueDate;
-            viewListDiv.appendChild(a);
+            let item = document.createElement('div');
+            item.classList.add('item');
+            item.innerHTML = list[i].getDescription + "   " + list[i].getDueDate;
+            viewListDiv.appendChild(item);
+
+            item.addEventListener('click', ()=>{
+                let deleteIndex = taskList.indexOf(taskList[i]);
+                taskList.splice(deleteIndex, 1);
+                viewListfunc(taskList); 
+                console.log('removed');     
+            });
         }
     }
 
@@ -45,7 +53,7 @@ const task = (parent,name) => {
         const date = document.createElement('input');
         date.setAttribute('type', 'date');
         form.appendChild(date);
-
+        
         const submitTaskFunc = (event) => {
             let taskName = input.value;
             let taskDate = date.value;
@@ -61,9 +69,10 @@ const task = (parent,name) => {
         submitTask.innerHTML = "add";
         submitTask.addEventListener('click', (event)=>{submitTaskFunc(event);});
         form.appendChild(submitTask)
+
     }
 }
 
 export{
-    task
+    task, taskList
 };
