@@ -24,14 +24,6 @@ const displayTodaysTasks = (parent, name, list) => {
 const isToday = (someDate) => {
     const today = new Date();
     
-    console.log(someDate.getFullYear());
-    console.log(someDate.getDate());
-    console.log(someDate.getMonth());
-    console.log('--------');
-    console.log(today.getFullYear());
-    console.log(today.getDate());
-    console.log(today.getMonth());
-
     return someDate.getDate() == today.getDate() &&
     someDate.getMonth() == today.getMonth() &&
     someDate.getFullYear() == today.getFullYear()

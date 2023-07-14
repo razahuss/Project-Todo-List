@@ -1,9 +1,9 @@
 import { todoList } from "./todoList";
 import { todo } from "./todos";
 
-const taskList = [];
+//const taskList = [];
 
-const task = (parent,name) => {
+const task = (parent,name, taskList) => {
     parent.innerHTML = "";
 
     const listName = document.createElement('p');
@@ -74,5 +74,5 @@ const task = (parent,name) => {
 }
 
 export{
-    task, taskList
+    task
 };
