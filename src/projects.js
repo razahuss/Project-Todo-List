@@ -22,6 +22,10 @@ const addProject = (formParent, projectParent) => {
         newProjbtn.innerHTML = input.value;
         const arr = [];
         newProjbtn.addEventListener('click', ()=>{task(container, input.value, arr);});
+        const deleteProjbtn = document.createElement('button');
+        deleteProjbtn.innerHTML = 'X';
+        newProjbtn.appendChild(deleteProjbtn);
+        deleteProjbtn.addEventListener('click', ()=>{newProjbtn.remove();});
         projectParent.appendChild(newProjbtn);
         projectList.push(newProjbtn);
         formParent.innerHTML = "";

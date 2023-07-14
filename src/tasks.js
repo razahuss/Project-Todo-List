@@ -27,6 +27,7 @@ const task = (parent,name, taskList) => {
             let item = document.createElement('div');
             item.classList.add('item');
             item.innerHTML = list[i].getDescription + "   " + list[i].getDueDate;
+            item.classList.add('list-item')
             viewListDiv.appendChild(item);
 
             item.addEventListener('click', ()=>{

@@ -14,6 +14,7 @@ const formParentD = document.querySelector('.formParentDiv');
 //const todayList = taskList; 
 const allProject = projectList;
 const todayList = [];
+
 const inboxbtn = document.getElementById('inbox').addEventListener('click', ()=>{task(container, 'Inbox', todayList);});
 const todaybtn = document.getElementById('today').addEventListener('click', ()=>{displayTodaysTasks(container, 'Today', todayList);});
 const weekbtn = document.getElementById('week').addEventListener('click', ()=>{displayWeeksTasks(container, 'Week', todayList);});

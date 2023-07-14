@@ -1,11 +1,14 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: monospace;
+    opacity: 0.9;
 }
 
 .header{
     height: 10vh;
-    background-color: aqua;
+    background-color: #3FEEE6;
+    
 }
 
 .main-body{
@@ -14,18 +17,89 @@ body{
 }
 
 .side-panel{
-    background-color: bisque;
+    background-color: #cafafe;
     display: flex;
     flex-direction: column;
+    gap: 2vh;
     width: 15%;
+    padding-top: 3vh;
+}
+
+.side-panel button{
+    border-style: none;
+    background-color: #9af3ef;
+    border-radius: 1vh;
+    padding: 1vh 1vh 1vh 1vh;
+}
+
+.side-panel button:hover{
+    background-color: #3FEEE6;
+}
+
+.side-panel button button:hover {
+    background-color: #23eee4;
 }
 
 .container{
-    background-color: rgb(207, 140, 145);
+    background-color: #cafafe;
     width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+.container button{
+    width: 20vh;
+    border-style: none;
+    background-color: #9af3ef;
+    border-radius: 1vh;
+    padding: 1vh 1vh 1vh 1vh;
+}
+
+.container button:hover{
+    background-color: #3FEEE6;
+}
+
+.container form{
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+}
+
+.container form input{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1vh;
+    border-color: rgb(218, 219, 219);
+}
+
+.container .list-item {
+    padding: 1vh 1vh 1vh 1vh;
+    border-style: none;
+    border-radius: 1vh;
+    font-size: 2vh;
+}
+
+.container .list-item:hover {
+    background-color: #9af3ef;
+    text-decoration: line-through;
+}
+
+.container p {
+    font-size: 3vh;
+}
+
+.container .first-message{
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
 }
 
 .footer{
     height: 10vh;
-    background-color: aqua;
+    background-color: #3FEEE6;
 }
