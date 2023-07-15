@@ -8,12 +8,16 @@ body{
 .header{
     height: 10vh;
     background-color: #3FEEE6;
-    
+    font-size: 5vh;
+    font-weight: 700;
+    padding-left: 3vh;
+    display: flex;
+    align-items: center;
 }
 
 .main-body{
     display: flex;
-    height: 80vh;
+    height: 85vh;
 }
 
 .side-panel{
@@ -23,6 +27,7 @@ body{
     gap: 2vh;
     width: 15%;
     padding-top: 3vh;
+    padding-left: 1vh;
 }
 
 .side-panel button{
@@ -37,7 +42,7 @@ body{
 }
 
 .side-panel button button:hover {
-    background-color: #23eee4;
+    background-color: #1dc0b8;
 }
 
 .container{
@@ -100,6 +105,18 @@ body{
 }
 
 .footer{
-    height: 10vh;
+    height: 5vh;
     background-color: #3FEEE6;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-panel input{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1vh;
+    border-color: rgb(218, 219, 219);
+    width: 90%;
 }
